@@ -1,0 +1,33 @@
+---
+import "../styles/global.css";
+import Button from "./Button.astro";
+const { title, text } = Astro.props;
+import HeadingPill from "./HeadingPill.astro";
+---
+
+<header>
+  <HeadingPill title="Growing with our Clients" variant="yellow" />
+  <div>
+    <h3>{title}</h3>
+    <p>{text}</p>
+  </div>
+</header>
+
+<style>
+  header {
+    display: flex;
+    width: 36.75rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6875rem;
+    flex-shrink: 0;
+  }
+
+  h3 {
+    font-size: 2.8125rem;
+    font-weight: 700;
+    line-height: 3.2625rem;
+  }
+
+  div
+</style>

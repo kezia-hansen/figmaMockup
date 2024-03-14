@@ -1,41 +1,56 @@
 ---
 import Base from "../layouts/Base.astro";
 import Columns from "../components/Columns.astro";
-import Card from "../components/Card.astro"
-
-import "../styles/global.css"
+import Card from "../components/Card.astro";
+import HeadingPill from "../components/HeadingPill.astro";
+import Button from "../components/Button.astro";
+import "../styles/global.css";
+import Titles from "../components/Titles.astro";
 ---
 
 <Base>
-<section>
-     <Columns cols="4">
-    <Card  title="Creative Ideas" variant="original" />
-    <Card  title="Best Features"variant="original"/>
-    <Card title="Experience"variant="original"/>
-    <Card title="Easy Solutions"variant="original"/>
+  <section class="full">
+    <div class="sec-button">
+      <Titles title="Our core values & principles" text="Capitalize on low hanging fruit to identify a ballpark value added activity beta test. Override the digital divide with additional from DevOps." />
+      <Button title="Get in touch" />
+    </div>
+
+    <Columns cols="4">
+      <Card title="Creative Ideas" variant="original" />
+      <Card title="Best Features" variant="original" />
+      <Card title="Experience" variant="original" />
+      <Card title="Easy Solutions" variant="original" />
     </Columns>
-</section>
 
-
-
-</Base>
-
-<style>
+    <style>
       section {
-    display: grid;
-    grid:
-      auto /
-      [full-start] 1fr
-      [content] minmax(0, var(--content-width))
-      1fr [full-end];
-    gap: 6rem 4rem;
+        display: grid;
+        grid:
+          auto /
+          [full-start] 1fr
+          [content] minmax(0, var(--content-width))
+          1fr [full-end];
+        gap: 6rem 4rem;
 
-    > * {
-      grid-column: content;
-    }
+        > * {
+          grid-column: content;
+        }
 
-    .full {
-      grid-column: full;
-    }
+        .full {
+          grid-column: full;
+        }
       }
-</style>
+
+      .full {
+        background: #f5f5f5;
+      }
+
+      .sec-button {
+        display: flex;
+        width: 74.875rem;
+        align-items: flex-end;
+        gap: 27.6875rem;
+      }
+    </style>
+  </section>
+</Base>

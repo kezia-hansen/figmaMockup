@@ -8,7 +8,7 @@ import "../styles/global.css";
   <Icon name="folder" />
   <h3>{title}</h3>
   <p>Lorem ipsum dolor sit amet consectetur.</p>
-  <a href="#">Read More</a>
+  <a href="#">Read More <Icon name="arrow" /></a>
 </article>
 
 <style>
@@ -25,6 +25,9 @@ import "../styles/global.css";
     font-style: normal;
     font-weight: 600;
     line-height: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
   }
 
   [data-variant="original"] {
@@ -53,33 +56,8 @@ import "../styles/global.css";
     margin-bottom: 1.375rem;
   }
 
-  [data-icon="barChart"] {
-    width: 3.29863rem;
-    height: 3.29863rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.375rem;
-    margin-bottom: 1.375rem;
-  }
-
-  [data-icon="globe"] {
-    width: 3.29863rem;
-    height: 3.29863rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.375rem;
-    margin-bottom: 1.375rem;
-  }
-
-  [data-icon="settings"] {
-    width: 3.29863rem;
-    height: 3.29863rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.375rem;
-    margin-bottom: 1.375rem;
+  [data-icon="arrow"] {
+    width: 0.81675rem;
+    height: 0.66825rem;
   }
 </style>

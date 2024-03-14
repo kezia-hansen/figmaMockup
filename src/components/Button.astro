@@ -1,0 +1,22 @@
+---
+import "../styles/global.css";
+import "../styles/reset.css";
+const { title } = Astro.props;
+---
+
+<button>{title}</button>
+
+<style>
+  button {
+    display: flex;
+    width: 10.4375rem;
+    padding: 0.9375rem 2.125rem;
+    align-items: flex-start;
+    gap: 0.625rem;
+    flex-shrink: 0;
+
+    border-radius: 2.625rem;
+    background: #181818;
+    color: #fff;
+  }
+</style>

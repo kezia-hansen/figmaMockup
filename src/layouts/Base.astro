@@ -1,8 +1,6 @@
 ---
 import "../styles/global.css";
 import "../styles/reset.css";
-import Nav from "../components/Nav.astro";
-import Footer from "../components/Footer.astro";
 ---
 
 <html lang="en">
@@ -11,20 +9,38 @@ import Footer from "../components/Footer.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+
+
+		 <!-- Cabin font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet" />
+
+    <!-- Lato font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
+
     <title>Astro</title>
   </head>
   <body>
     <header>
-      <Nav />
+
     </header>
     <main>
       <slot />
     </main>
-    <Footer />
+<footer></footer>
   </body>
 </html>
 
 <style>
+
+    header,
+  footer {
+    height: 80px;
+    background: #000;
+  }
   main {
     display: grid;
     grid:

@@ -1,6 +1,7 @@
 ---
 const { title, variant } = Astro.props;
 import { Icon } from "astro-icon/components";
+import "../styles/global.css"
 ---
 
 <article data-variant={variant}>
@@ -14,6 +15,8 @@ import { Icon } from "astro-icon/components";
   article {
     background: #fff;
     padding: 1rem;
+    border-radius: 1.25rem;
+
   }
 
   [data-variant="original"] {

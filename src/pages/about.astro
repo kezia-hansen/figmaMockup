@@ -14,7 +14,14 @@ import Video from "../components/Video.astro";
 ---
 
 <Base>
-  <HeroImage img="../images/about-hero.jpg" />
+  <div class="containerabout">
+    <img src="../images/about-hero.jpg" alt="heroimage" class="imghero" />
+
+    <div class="services">
+      <HeadingPill variant="yellow" title="services" />
+      <Titles title="Creative Services For Boost Your Business Growth" tekst="" />
+    </div>
+  </div>
   <section class="firstflex">
     <div>
       <Columns cols="3">
@@ -154,5 +161,30 @@ import Video from "../components/Video.astro";
     align-items: center;
     gap: 0.6875rem;
     text-align: center;
+  }
+
+  .containerabout {
+    display: grid;
+    place-items: center;
+  }
+  .imghero {
+    width: 153%;
+    height: 100%;
+  }
+  .imghero,
+  .services {
+    grid-area: 1 / 1;
+  }
+  .services {
+    padding: 3rem 3.75rem 3.625rem 3.75rem;
+    border-radius: 1.8125rem;
+    background: rgba(255, 255, 255, 0.85);
+
+    backdrop-filter: blur(5.5px);
+    display: inline-flex;
+
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.625rem;
   }
 </style>

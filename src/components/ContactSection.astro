@@ -1,0 +1,68 @@
+---
+import "../styles/global.css";
+---
+
+<ul>
+  <div>
+    <li>Call Today <br />+1 800 100 900</li>
+  </div>
+  <div>
+    <li>Monday To Friday <br /> 9AM - 5PM</li>
+  </div>
+  <div>
+    <li>USA Office <br /> 195 Devonshire St Boston, MA 02110</li>
+  </div>
+</ul>
+
+<style>
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3.5rem;
+  }
+
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 1rem;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
+    color: #595566;
+  }
+
+  li:nth-of-type(1)::before {
+    content: "";
+    flex-shrink: 0;
+    width: 3.27075rem;
+    height: 3.27075rem;
+    aspect-ratio: 1;
+    background: url(/src/icons/round-yl.svg) 50% 50% / contain no-repeat;
+  }
+
+  li:nth-of-type(2)::before {
+    content: "";
+    flex-shrink: 0;
+    width: 3.27075rem;
+    height: 3.27075rem;
+    aspect-ratio: 1;
+    background: url(/src/icons/round-gr.svg) 50% 50% / contain no-repeat;
+  }
+
+  li:nth-of-type(3)::before {
+    content: "";
+    flex-shrink: 0;
+    width: 3.27075rem;
+    height: 3.27075rem;
+    aspect-ratio: 1;
+    background: url(/src/icons/round-gra.svg) 50% 50% / contain no-repeat;
+  }
+</style>

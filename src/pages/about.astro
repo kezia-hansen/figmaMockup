@@ -10,10 +10,12 @@ import Titles from "../components/Titles.astro";
 
 <Base>
   <section class="full">
-    <div class="sec-button">
-      <Titles title="Our core values & principles" text="Capitalize on low hanging fruit to identify a ballpark value added activity beta test. Override the digital divide with additional from DevOps." />
-      <Button title="Get in touch" />
-    </div>
+    <Columns cols="2">
+      <div class="sec-button">
+        <Titles title="Our core values & principles" text="Capitalize on low hanging fruit to identify a ballpark value added activity beta test. Override the digital divide with additional from DevOps." />
+        <Button title="Get in touch" />
+      </div>
+    </Columns>
 
     <Columns cols="4">
       <Card title="Creative Ideas" variant="original" />
@@ -32,6 +34,8 @@ import Titles from "../components/Titles.astro";
           1fr [full-end];
         gap: 6rem 4rem;
 
+        padding: 6.25rem;
+
         > * {
           grid-column: content;
         }
@@ -49,7 +53,7 @@ import Titles from "../components/Titles.astro";
         display: flex;
         width: 74.875rem;
         align-items: flex-end;
-        gap: 27.6875rem;
+        gap: 22rem;
       }
     </style>
   </section>

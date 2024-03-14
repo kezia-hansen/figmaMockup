@@ -1,0 +1,46 @@
+---
+import "../styles/global.css";
+---
+
+<dl>
+  <div>
+    <dt>Successful Work</dt>
+    <dd>1128+</dd>
+  </div>
+  <div>
+    <dt>Team member</dt>
+    <dd>908+</dd>
+  </div>
+  <div>
+    <dt>Happy customers</dt>
+    <dd>258+</dd>
+  </div>
+  <div>
+    <dt>Creative idea</dt>
+    <dd>564+</dd>
+  </div>
+</dl>
+
+<style>
+  dl {
+    margin: 3rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: 8.4375rem;
+
+    > * {
+      display: flex;
+      flex-direction: column-reverse;
+      font-size: 1.125rem;
+      color: #181818;
+
+      :last-child {
+        font-size: 3.125rem;
+        font-weight: 500;
+      }
+    }
+  }
+</style>

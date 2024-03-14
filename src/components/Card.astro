@@ -1,7 +1,7 @@
 ---
 const { title, variant } = Astro.props;
 import { Icon } from "astro-icon/components";
-import "../styles/global.css"
+import "../styles/global.css";
 ---
 
 <article data-variant={variant}>
@@ -15,24 +15,22 @@ import "../styles/global.css"
   article {
     padding: 2.25rem 1.4375rem;
     border-radius: 1.25rem;
-
   }
 
-  a{
+  a {
     text-decoration: none;
     color: var(--color-text);
-        font-family: "Lato", sans-serif;
-        font-size: 1.125rem;
-        font-style: normal;
-font-weight: 600;
-line-height: 1.8rem;
-
+    font-family: "Lato", sans-serif;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.8rem;
   }
 
   [data-variant="original"] {
     background: #fff;
     color: #000;
-    border: 1px solid #EAEAEA;
+    border: 1px solid #eaeaea;
   }
 
   [data-variant="primary"] {

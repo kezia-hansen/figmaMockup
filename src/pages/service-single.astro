@@ -11,34 +11,23 @@ import Titles from "../components/Titles.astro";
 import Checkmark from "../components/Checkmark.astro";
 import Numbers from "../components/Numbers.astro";
 import Video from "../components/Video.astro";
+import { Icon } from "astro-icon/components";
 ---
 
 <Base>
-  <HeroImage img="../images/about-hero.jpg" />
-  <section class="firstflex">
-    <div>
-      <Columns cols="3">
-        <HeadingPill variant="green" title="Our Vision" />
-      </Columns>
-      <Titles title="Turn your ideas into reality." text="Capitalize on low hanging fruit to identify a ballpark value added activity beta test. Override the digital divide with additional from DevOps." />
-      <Checkmark />
-    </div>
-    <div>
-      <figure>
-        <img src="./images/imgpattern.jpg" alt="" class="h2img" />
-      </figure>
-    </div>
-  </section>
-  <Numbers />
+  <HeroImage img="../images/service-hero.jpg" />
 
   <section class="full">
     <div>
       <Columns cols="3">
-        <HeadingPill title="Growing with our Clients" variant="yellow" />
+        <Icon name="coloredchart" />
       </Columns>
       <div class="secbutton">
         <Titles title="Our core values & principles" text="Capitalize on low hanging fruit to identify a ballpark value added activity beta test. Override the digital divide with additional from DevOps." />
-        <Button title="Get in touch" />
+        <div class="arrow-container">
+          <Icon name="arrow-round-bl" />
+          <Icon name="arrow-round-yl" />
+        </div>
       </div>
     </div>
     <Columns cols="4">
@@ -154,5 +143,39 @@ import Video from "../components/Video.astro";
     align-items: center;
     gap: 0.6875rem;
     text-align: center;
+  }
+
+  .arrow-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.625rem;
+  }
+
+  [data-icon="coloredchart"] {
+    width: 6.58675rem;
+    height: 4.44144rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.375rem;
+    margin-bottom: 1.375rem;
+  }
+  [data-icon="arrow-round-bl"] {
+    width: 4.34594rem;
+    height: 4.34594rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.375rem;
+    margin-bottom: 1.375rem;
+  }
+  [data-icon="arrow-round-yl"] {
+    width: 4.34594rem;
+    height: 4.34594rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.375rem;
+    margin-bottom: 1.375rem;
   }
 </style>

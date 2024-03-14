@@ -1,0 +1,103 @@
+---
+import { Icon } from "astro-icon/components";
+import "../styles/global.css";
+const { name, text, position, variant, img } = Astro.props;
+---
+
+<article>
+  <figure>
+    <img src={img} alt="Sarah" />
+
+    <div class="badge-container">
+      <div class="badge" data-variant={variant}>
+        <p>{position}</p>
+      </div>
+    </div>
+  </figure>
+  <div>
+    <h3>{name}</h3>
+    <p>{text}</p>
+  </div>
+  <div class="icon-container">
+    <Icon name="instagram" />
+    <Icon name="facebook" />
+    <Icon name="twitter" />
+  </div>
+</article>
+
+<style>
+  article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6875rem;
+    padding: 2.25rem 1.4375rem;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-family: "Lato", sans-serif;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8125rem;
+  }
+
+  figure {
+    position: relative;
+
+    > img {
+      border-radius: 1rem;
+    }
+  }
+
+  .badge-container {
+    position: absolute;
+    bottom: 23px;
+    right: 10px;
+    z-index: 1;
+  }
+
+  /* Styling til det new badge */
+  .badge {
+    border-radius: 100px;
+    padding: 1px 12px;
+    font-size: 2rem;
+  }
+
+  .icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.8125rem;
+    flex-direction: row;
+  }
+
+  [data-variant="yellow"] {
+    background: #ffcc4a;
+
+    p {
+      color: var(--color-text);
+    }
+  }
+
+  [data-variant="black"] {
+    background: #181818;
+    p {
+      color: #fff;
+    }
+  }
+</style>

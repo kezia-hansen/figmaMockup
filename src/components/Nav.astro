@@ -1,0 +1,42 @@
+---
+import "../styles/global.css";
+---
+
+<nav class="topnav">
+  <a href="/about">About</a>
+  <a href="/service-single">Service Single</a>
+  <a href="/team">Team</a>
+  <a href="/case-study-single">Case Study Single</a>
+</nav>
+
+<style>
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 12;
+  }
+
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: "Lato", sans-serif;
+  }
+
+  .topnav a:hover {
+    background-color: #ffcc4a;
+    color: black;
+  }
+
+  .topnav a.active {
+    background-color: #4caf50;
+    color: white;
+  }
+</style>

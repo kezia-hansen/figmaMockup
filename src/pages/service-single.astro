@@ -2,22 +2,25 @@
 import "../styles/global.css";
 import Base from "../layouts/Base.astro";
 import Columns from "../components/Columns.astro";
-import HeroImage from "../components/HeroImage.astro";
-import Card from "../components/Card.astro";
-import TeamCard from "../components/TeamCard.astro";
 import HeadingPill from "../components/HeadingPill.astro";
-import Button from "../components/Button.astro";
 import Titles from "../components/Titles.astro";
 import Checkmark from "../components/Checkmark.astro";
 import ContactSection from "../components/ContactSection.astro";
 import Brands from "../components/Brands.astro";
 import Video2 from "../components/Video2.astro";
-import { Icon } from "astro-icon/components";
 import ScrollingContainer from "../components/ScrollingContainer.astro";
+import { Icon } from "astro-icon/components";
 ---
 
 <Base>
-  <HeroImage img="../images/service-hero.jpg" />
+  <div class="containerabout">
+    <img src="../images/service-hero.jpg" alt="heroimage" class="imghero" />
+
+    <div class="services">
+      <HeadingPill variant="yellow" title="Service sINGLE" />
+      <Titles title="Services Details" tekst="" />
+    </div>
+  </div>
 
   <section class="full">
     <div>
@@ -171,6 +174,31 @@ import ScrollingContainer from "../components/ScrollingContainer.astro";
       flex-direction: column;
       align-items: flex-start;
       gap: 1.5rem;
+    }
+
+    .containerabout {
+      display: grid;
+      place-items: center;
+    }
+    .imghero {
+      width: 120%;
+      height: 100%;
+    }
+    .imghero,
+    .services {
+      grid-area: 1 / 1;
+    }
+    .services {
+      padding: 3rem 3.75rem 3.625rem 3.75rem;
+      border-radius: 1.8125rem;
+      background: rgba(255, 255, 255, 0.85);
+
+      backdrop-filter: blur(5.5px);
+      display: inline-flex;
+
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.625rem;
     }
 
     [data-icon="coloredchart"] {

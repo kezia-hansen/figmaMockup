@@ -7,29 +7,27 @@ import Card from "../components/Card.astro";
 <main>
   <section class="full">
     <ul role="list">
-      <Card title="Creative Ideas" variant="primary" />
-      <li class="bg-secondary">
-        <Icon name="barChart" />
-        <h3>Best Features</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <br />
-        <a href="#">Read More <Icon name="arrow" /> </a>
+      <li class="color1">
+        <Icon name="sheet" />
+        <h3>The Balance Sheet</h3>
+        <p>The Balance Sheet is a summary of the assets and liabilities and equity of a business at a specific point of time.</p>
+      </li>
+      <li class="color2">
+        <Icon name="card" />
+        <h3>Income Statement</h3>
+        <p>The Income (Profit and Loss) Statement, commonly referred to as the P&L statement, summarizes the revenue and expenses for a specific time period (one month, one quarter, one year, etc.)</p>
       </li>
 
-      <li>
-        <Icon name="globe" />
-        <h3>Experience</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget accumsan augue Donec aliquam.</p>
-        <br />
-        <a href="#">Read More <Icon name="arrow" /> </a>
+      <li class="color1">
+        <Icon name="bank" />
+        <h3>Financial Plan</h3>
+        <p>Keep your information current and review the documents on a regular basis (monthly or more often if needed). Review them with key individuals within your company.</p>
       </li>
 
-      <li>
-        <Icon name="settings" />
-        <h3>Easy Solutions</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <br />
-        <a href="#">Read More <Icon name="arrow" /> </a>
+      <li class="color1">
+        <Icon name="money" />
+        <h3>Financial Ratios</h3>
+        <p>Ratios are useful when comparing your company with the competition on financial performance and also when benchmarking the performance of your company.</p>
       </li>
     </ul>
   </section>
@@ -150,27 +148,19 @@ import Card from "../components/Card.astro";
     }
   }
 
-  a {
-    display: flex;
-    align-items: center;
-    gap: 0.625rem;
-    color: #181818;
-    font-family: "Lato", sans-serif;
-    font-size: 1.125rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 1.8rem;
-    text-decoration: none;
+  .color1 {
+    background: #ebebeb;
+  }
+  .color2 {
+    background: #181818;
 
-    [data-icon="arrow"] {
-      width: 0.81675rem;
-      height: 0.66825rem;
-      stroke-width: 2px;
-      stroke: #141414;
+    p,
+    h3 {
+      color: #fff;
     }
   }
 
-  [data-icon="folder"] {
+  [data-icon="sheet"] {
     width: 3.29863rem;
     height: 3.29863rem;
     display: flex;
@@ -180,7 +170,7 @@ import Card from "../components/Card.astro";
     margin-bottom: 1.375rem;
   }
 
-  [data-icon="barChart"] {
+  [data-icon="card"] {
     width: 3.29863rem;
     height: 3.29863rem;
     display: flex;
@@ -190,7 +180,7 @@ import Card from "../components/Card.astro";
     margin-bottom: 1.375rem;
   }
 
-  [data-icon="globe"] {
+  [data-icon="bank"] {
     width: 3.29863rem;
     height: 3.29863rem;
     display: flex;
@@ -200,7 +190,7 @@ import Card from "../components/Card.astro";
     margin-bottom: 1.375rem;
   }
 
-  [data-icon="settings"] {
+  [data-icon="money"] {
     width: 3.29863rem;
     height: 3.29863rem;
     display: flex;

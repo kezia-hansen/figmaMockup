@@ -1,10 +1,10 @@
 ---
 import "../styles/global.css";
-const { title, text } = Astro.props;
+const { title, text, variant } = Astro.props;
 ---
 
 <header>
-  <div>
+  <div data-variant={variant}>
     <h3>{title}</h3>
     <p>{text}</p>
   </div>
@@ -26,5 +26,7 @@ const { title, text } = Astro.props;
     line-height: 3.2625rem;
   }
 
-  div
+  [data-variant="white"] {
+    color: #fff;
+  }
 </style>

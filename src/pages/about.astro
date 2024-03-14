@@ -9,13 +9,22 @@ import Titles from "../components/Titles.astro";
 ---
 
 <Base>
+  <section>
+    <HeadingPill title="Our vision" variant="green" />
+    <Titles title="Turn your ideas into reality." text="Capitalize on low hanging fruit to identify a ballpark value added activity beta test. Override the digital divide with additional from DevOps." />
+  </section>
   <section class="full">
-    <Columns cols="2">
-      <div class="sec-button">
-        <Titles title="Our core values & principles" text="Capitalize on low hanging fruit to identify a ballpark value added activity beta test. Override the digital divide with additional from DevOps." />
-        <Button title="Get in touch" />
-      </div>
-    </Columns>
+    <div>
+      <Columns cols="3">
+        <HeadingPill title="Growing with our Clients" variant="yellow" />
+      </Columns>
+      <Columns cols="2">
+        <div class="sec-button">
+          <Titles title="Our core values & principles" text="Capitalize on low hanging fruit to identify a ballpark value added activity beta test. Override the digital divide with additional from DevOps." />
+          <Button title="Get in touch" />
+        </div>
+      </Columns>
+    </div>
 
     <Columns cols="4">
       <Card title="Creative Ideas" variant="original" />

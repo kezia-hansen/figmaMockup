@@ -12,6 +12,7 @@ import Checkmark from "../components/Checkmark.astro";
 import Numbers from "../components/Numbers.astro";
 import Video from "../components/Video.astro";
 import { Icon } from "astro-icon/components";
+import ScrollingContainer from "../components/ScrollingContainer.astro";
 ---
 
 <Base>
@@ -30,12 +31,7 @@ import { Icon } from "astro-icon/components";
         </div>
       </div>
     </div>
-    <Columns cols="4">
-      <Card title="Creative Ideas" variant="original" />
-      <Card title="Best Features" variant="original" />
-      <Card title="Experience" variant="original" />
-      <Card title="Easy Solutions" variant="original" />
-    </Columns>
+    <ScrollingContainer />
   </section>
   <section>
     <div class="centered">
